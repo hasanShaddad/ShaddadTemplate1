@@ -1,5 +1,8 @@
 # ErtiqaaTemplate1
-84ecd431d93db07eda2fbc5c24e003a5a489394a
+AppVeyor: [![contact us](#)](#)
+
+Travis:   [![demo](#)](#)
+
 Ertiqaa template is a mvc website fully dynamic and responsive 
 its easy to use and come with back admin cntrol panel
 you can use it or change it as you need
