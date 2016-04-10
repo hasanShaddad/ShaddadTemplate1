@@ -1,0 +1,86 @@
+﻿body {
+    background-color:#fff;
+   
+}
+
+.thumbnail{
+    background-color:transparent;
+    border-color:green;
+}
+.thumbnail h4{
+    color:black;
+}
+.rowspace{
+    position:absolute;
+    height:20px;
+    min-height:20px;
+}
+input[type=file] {
+    margin: 0 auto;
+    
+}
+
+.adminBorder {
+   
+    margin: 0 auto;
+    margin-top:50px;
+    width: 250px; 
+    padding: 10px;
+    height: 100px;
+   
+    outline: 2px solid green;
+    outline-offset: 15px;
+} 
+.adminNoBorder {
+   
+    margin: 0 auto;
+    margin-top:10px;
+    width: 300px; 
+    padding: 10px;
+    height: 50px;
+
+} 
+.alarm {color:red;}
+.gren {color:green;}
+ 
+.navbar{
+    padding:20px 10px;  
+    -webkiit-transition:all 0.7s;
+    transition:all 0.7s;
+   
+}
+  .navbar-header{
+   margin:auto;
+}
+
+.cbp-af-header-shrink{
+    padding-top:5px;
+     padding-bottom:5px;
+     opacity: 1;
+}
+
+@media(max-width:400px){
+    .navbar-header{
+   position:relative;
+   margin:auto;
+}
+    .navbar img{
+   position:absolute;
+   top:0;
+   bottom:0;
+   width:40%;
+
+}
+}
+ 
+.cbp-af-header-shrink .logdiv{
+    padding-top:0px;
+     padding-bottom:5px;
+    display:block;
+}
+.navbar-default {
+     background: #3d0202;
+    
+    width: 100%;
+
+}

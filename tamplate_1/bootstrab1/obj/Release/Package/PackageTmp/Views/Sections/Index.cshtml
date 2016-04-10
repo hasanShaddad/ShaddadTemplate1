@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Tamplate_1.Models.C_Section_Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br/><br/> 
+<div class="container-fluid text-center ">
+    <h2>admin page</h2><br>
+    <h4>sections</h4>
+    
+    <div class="row text-center" style="border:solid;  padding:10px; margin:5px 5px 5px 5px;">
+    <div class="col-sm-12">
+        <h3>select your theme from here</h3>
+    </div>
+
+    @using (Html.BeginForm("Theme", "sections"))
+    {
+        <div class="col-sm-3">
+            <p>Dark</p>
+            @Html.RadioButton("MyTheme", "Darck")
+        </div>
+    <div class="col-sm-3">
+        <p>color</p>
+        @Html.RadioButton("MyTheme", "Color")
+        </div>
+    <div class="col-sm-3">
+        <p>light</p>
+        @Html.RadioButton("MyTheme", "light")
+    </div>
+    <div class="col-sm-3">
+        <p>Skay</p>
+        @Html.RadioButton("MyTheme", "Skay")
+    </div>
+       
+    <div class="col-sm-12">
+        <br />
+        <input class="button" id="submit" type="submit" value="Submit" />
+    </div>
+    }
+
+    </div>
+        <div class="row text-center" style="border:solid;  padding:10px; margin:5px 5px 5px 5px;">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col-sm-4">
+                    <p>@item.C_Section_Name</p>
+
+                    <img src='@item.C_Section_Image' style="width:254px;height:120px; border:double" />
+
+                    <br />
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Edit-Delete-Add new contents</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>   <a href="#" class="btn btn-primary">@Html.ActionLink("Edit", "Edit", new { id = item.Id})</a></li>
+                            <li>     <a href="#" class="btn btn-primary">@Html.ActionLink("Details", "Details", new { id = item.Id }) </a></li>
+                            <li>     <a href="#" class="btn btn-primary">@Html.ActionLink("Show | Hide", "ShowHide", new { id = item.Id }) </a></li>
+                            <li>     <a class="btn btn-primary">@Html.ActionLink("contents", "Index", "Section_content", new { id = item.Id }, null)</a></li>
+
+                        </ul>
+                    </div>
+                    <br />
+                    @*this code foe showen if the section is displaed or not*@
+                    @if (item.C_Display == "block")
+                    {
+
+                        @Html.ActionLink("activate", "ShowHide", new { id = item.Id }, new { @class = "gren", title = "press to hide this section" })
+                    }
+                    else
+                    {
+
+                        @Html.ActionLink("hiden", "ShowHide", new { id = item.Id }, new { @class = "alarm", title = "press to activate this section" })
+
+                    }
+
+
+                    
+                </div>
+
+
+            }
+        </div>
+        <br />
+        <a class="page-scroll" href="@Url.Action("Index", "MyAdmin")"><h4>home admin page</h4></a>
+    </div>

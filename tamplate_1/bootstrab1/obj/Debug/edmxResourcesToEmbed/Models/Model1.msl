@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShaddadDbModelStoreContainer" CdmEntityContainer="ShaddadDbEntities">
+    <EntitySetMapping Name="C_Footer">
+      <EntityTypeMapping TypeName="ShaddadDbModel.C_Footer">
+        <MappingFragment StoreEntitySet="_Footer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Name" ColumnName="_Name" />
+          <ScalarProperty Name="C_Description" ColumnName="_Description" />
+          <ScalarProperty Name="C_Image" ColumnName="_Image" />
+          <ScalarProperty Name="C_Link" ColumnName="_Link" />
+          <ScalarProperty Name="C_Alt" ColumnName="_Alt" />
+          <ScalarProperty Name="C_Title" ColumnName="_Title" />
+          <ScalarProperty Name="C_Display" ColumnName="_Display" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Images">
+      <EntityTypeMapping TypeName="ShaddadDbModel.C_Images">
+        <MappingFragment StoreEntitySet="_Images">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Title" ColumnName="_Title" />
+          <ScalarProperty Name="C_Alt" ColumnName="_Alt" />
+          <ScalarProperty Name="C_Width" ColumnName="_Width" />
+          <ScalarProperty Name="C_Hight" ColumnName="_Hight" />
+          <ScalarProperty Name="C_Link" ColumnName="_Link" />
+          <ScalarProperty Name="C_Description" ColumnName="_Description" />
+          <ScalarProperty Name="C_Order" ColumnName="_Order" />
+          <ScalarProperty Name="C_Display" ColumnName="_Display" />
+          <ScalarProperty Name="C_Section_Id" ColumnName="_Section_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Menu">
+      <EntityTypeMapping TypeName="ShaddadDbModel.C_Menu">
+        <MappingFragment StoreEntitySet="_Menu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_String___String___String___String" ColumnName="_String&#xD;&#xA;_String&#xD;&#xA;_String&#xD;&#xA;_String" />
+          <ScalarProperty Name="C_Link" ColumnName="_Link" />
+          <ScalarProperty Name="C_Li" ColumnName="_Li" />
+          <ScalarProperty Name="C_Title" ColumnName="_Title" />
+          <ScalarProperty Name="C_Img" ColumnName="_Img" />
+          <ScalarProperty Name="C_ToolTip" ColumnName="_ToolTip" />
+          <ScalarProperty Name="C_Main_Id" ColumnName="_Main_Id" />
+          <ScalarProperty Name="C_Has_sub" ColumnName="_Has_sub" />
+          <ScalarProperty Name="C_Display" ColumnName="_Display" />
+          <ScalarProperty Name="C_Alt" ColumnName="_Alt" />
+          <ScalarProperty Name="C_Pro_Ico" ColumnName="_Pro_Ico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Section_Content">
+      <EntityTypeMapping TypeName="ShaddadDbModel.C_Section_Content">
+        <MappingFragment StoreEntitySet="_Section_Content">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Section_Id" ColumnName="_Section_Id" />
+          <ScalarProperty Name="C_Heading" ColumnName="_Heading" />
+          <ScalarProperty Name="C_Sub_Heading" ColumnName="_Sub_Heading" />
+          <ScalarProperty Name="C_H1_txt1" ColumnName="_H1_txt1" />
+          <ScalarProperty Name="C_H1_txt2" ColumnName="_H1_txt2" />
+          <ScalarProperty Name="C_H2_txt1" ColumnName="_H2_txt1" />
+          <ScalarProperty Name="C_H2_txt2" ColumnName="_H2_txt2" />
+          <ScalarProperty Name="C_H3_txt1" ColumnName="_H3_txt1" />
+          <ScalarProperty Name="C_H3_txt2" ColumnName="_H3_txt2" />
+          <ScalarProperty Name="C_H4_txt1" ColumnName="_H4_txt1" />
+          <ScalarProperty Name="C_H4_txt2" ColumnName="_H4_txt2" />
+          <ScalarProperty Name="C_p_txt1" ColumnName="_p_txt1" />
+          <ScalarProperty Name="C_p_txt2" ColumnName="_p_txt2" />
+          <ScalarProperty Name="C_p_txt3" ColumnName="_p_txt3" />
+          <ScalarProperty Name="C_p_txt4" ColumnName="_p_txt4" />
+          <ScalarProperty Name="C_R_To_L" ColumnName="_R_To_L" />
+          <ScalarProperty Name="C_L_To_R" ColumnName="_L_To_R" />
+          <ScalarProperty Name="C_So_Page_Name" ColumnName="_So_Page_Name" />
+          <ScalarProperty Name="C_So_Page_Link" ColumnName="_So_Page_Link" />
+          <ScalarProperty Name="C_So_Video_Link" ColumnName="_So_Video_Link" />
+          <ScalarProperty Name="C_So_Access_Token" ColumnName="_So_Access_Token" />
+          <ScalarProperty Name="C_So_Photo_Album" ColumnName="_So_Photo_Album" />
+          <ScalarProperty Name="C_So_Search_Trim_1" ColumnName="_So_Search_Trim_1" />
+          <ScalarProperty Name="C_So_Search_Trim_2" ColumnName="_So_Search_Trim_2" />
+          <ScalarProperty Name="C_Txt_1" ColumnName="_Txt_1" />
+          <ScalarProperty Name="C_Txt_2" ColumnName="_Txt_2" />
+          <ScalarProperty Name="C_Txt_3" ColumnName="_Txt_3" />
+          <ScalarProperty Name="C_Txt_4" ColumnName="_Txt_4" />
+          <ScalarProperty Name="C_Txt_5" ColumnName="_Txt_5" />
+          <ScalarProperty Name="C_Txt_6" ColumnName="_Txt_6" />
+          <ScalarProperty Name="C_Txt_7" ColumnName="_Txt_7" />
+          <ScalarProperty Name="C_Txt_8" ColumnName="_Txt_8" />
+          <ScalarProperty Name="C_Url_1" ColumnName="_Url_1" />
+          <ScalarProperty Name="C_Url_2" ColumnName="_Url_2" />
+          <ScalarProperty Name="C_Url_3" ColumnName="_Url_3" />
+          <ScalarProperty Name="C_Url_4" ColumnName="_Url_4" />
+          <ScalarProperty Name="C_Url_5" ColumnName="_Url_5" />
+          <ScalarProperty Name="C_Url_6" ColumnName="_Url_6" />
+          <ScalarProperty Name="C_Url_7" ColumnName="_Url_7" />
+          <ScalarProperty Name="C_Url_8" ColumnName="_Url_8" />
+          <ScalarProperty Name="C_Img_1" ColumnName="_Img_1" />
+          <ScalarProperty Name="C_Img_2" ColumnName="_Img_2" />
+          <ScalarProperty Name="C_Img_3" ColumnName="_Img_3" />
+          <ScalarProperty Name="C_Img_4" ColumnName="_Img_4" />
+          <ScalarProperty Name="C_Img_5" ColumnName="_Img_5" />
+          <ScalarProperty Name="C_Img_6" ColumnName="_Img_6" />
+          <ScalarProperty Name="C_Img_7" ColumnName="_Img_7" />
+          <ScalarProperty Name="C_Img_8" ColumnName="_Img_8" />
+          <ScalarProperty Name="C_Description" ColumnName="_Description" />
+          <ScalarProperty Name="C_Order" ColumnName="_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Section_Table">
+      <EntityTypeMapping TypeName="ShaddadDbModel.C_Section_Table">
+        <MappingFragment StoreEntitySet="_Section_Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Section_Name" ColumnName="_Section_Name" />
+          <ScalarProperty Name="C_Section_Image" ColumnName="_Section_Image" />
+          <ScalarProperty Name="C_Heading" ColumnName="_Heading" />
+          <ScalarProperty Name="C_Sub_Heading" ColumnName="_Sub_Heading" />
+          <ScalarProperty Name="C_Main_Txt_1" ColumnName="_Main_Txt_1" />
+          <ScalarProperty Name="C_Main_Txt_2" ColumnName="_Main_Txt_2" />
+          <ScalarProperty Name="C_Main_Txt_3" ColumnName="_Main_Txt_3" />
+          <ScalarProperty Name="C_Main_Txt_4" ColumnName="_Main_Txt_4" />
+          <ScalarProperty Name="C_Main_Txt_5" ColumnName="_Main_Txt_5" />
+          <ScalarProperty Name="C_Main_Img_1" ColumnName="_Main_Img_1" />
+          <ScalarProperty Name="C_Main_Img_2" ColumnName="_Main_Img_2" />
+          <ScalarProperty Name="C_Main_Img_3" ColumnName="_Main_Img_3" />
+          <ScalarProperty Name="C_Main_Img_4" ColumnName="_Main_Img_4" />
+          <ScalarProperty Name="C_Display" ColumnName="_Display" />
+          <ScalarProperty Name="C_Order" ColumnName="_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Themes">
+      <EntityTypeMapping TypeName="ShaddadDbModel.Themes">
+        <MappingFragment StoreEntitySet="Themes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Color1" ColumnName="_Color1" />
+          <ScalarProperty Name="C_Color2" ColumnName="_Color2" />
+          <ScalarProperty Name="C_Color3" ColumnName="_Color3" />
+          <ScalarProperty Name="C_Color4" ColumnName="_Color4" />
+          <ScalarProperty Name="C_Color5" ColumnName="_Color5" />
+          <ScalarProperty Name="C_Color6" ColumnName="_Color6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

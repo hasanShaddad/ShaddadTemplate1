@@ -1,0 +1,576 @@
+﻿@model Tamplate_1.Models.C_Section_Content
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br /><br /><br /><br />
+
+
+<div class="container-fluid text-center ">
+
+    <h2>@Html.DisplayFor(model => model.C_Section_Table.C_Section_Name) &nbsp; Contents</h2><br>
+    <h3>Detales page</h3>
+   
+
+    <div class="row text-center" style="border:solid;  padding-top:10px; margin:0px 5px 0px 5px;">
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Heading</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Heading)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Sub_Heading</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Sub_Heading)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h1 text 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H1_txt1)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h1 text 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H1_txt2)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h2 text 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H2_txt1)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h2 text 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H2_txt2)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h3 text 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H3_txt1)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h3 text 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H3_txt2)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h4 text 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H4_txt1)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>h4 text 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_H4_txt2)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>paragraph text 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_p_txt1)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>paragraph text 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_p_txt2)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>paragraph text 3</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_p_txt3)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>paragraph text 4</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_p_txt4)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>left to right tag</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_L_To_R)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>right to left tag</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_R_To_L)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>social Page Name</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Page_Name)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>social Page Link</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Page_Link)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Acsses token</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Access_Token)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>photo album link</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Photo_Album)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>search trim 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Search_Trim_1)
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>search trim 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_So_Search_Trim_2)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>First text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_1)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Second text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_2)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Therd text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_3)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Fourth text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_4)
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Fifth text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_5)
+                    @Html.ValidationMessageFor(model => model.C_Txt_5)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Sixth text</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_6)
+                    @Html.ValidationMessageFor(model => model.C_Txt_6)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Font Asowme 1</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_7)
+                    @Html.ValidationMessageFor(model => model.C_Txt_7)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Font Asowme 2</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Txt_8)
+                    @Html.ValidationMessageFor(model => model.C_Txt_8)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>First url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_1)
+                    @Html.ValidationMessageFor(model => model.C_Url_1)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Second url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_2)
+                    @Html.ValidationMessageFor(model => model.C_Url_2)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Therd url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_3)
+                    @Html.ValidationMessageFor(model => model.C_Url_3)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Fourth url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_4)
+                    @Html.ValidationMessageFor(model => model.C_Url_4)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>fifth url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_5)
+                    @Html.ValidationMessageFor(model => model.C_Url_5)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Sixth url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_6)
+                    @Html.ValidationMessageFor(model => model.C_Url_6)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Seventh url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_7)
+                    @Html.ValidationMessageFor(model => model.C_Url_7)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Eighth url</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Url_8)
+                    @Html.ValidationMessageFor(model => model.C_Url_8)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>First Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images.C_Title)
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Second Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images1.C_Title)
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Therd Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images2.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Fourth Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images3.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Fifth Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images4.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Sixth Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images5.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Seventh Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images6.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Eighth Photo</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Images7.C_Title)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Description</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Description)
+                    @Html.ValidationMessageFor(model => model.C_Description)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <div class="editor-label">
+                    <h4>Order No</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.DisplayFor(model => model.C_Order)
+                    @Html.ValidationMessageFor(model => model.C_Order)
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

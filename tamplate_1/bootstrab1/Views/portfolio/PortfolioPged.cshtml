@@ -1,0 +1,82 @@
+﻿<!-- Portfolio Grid Section -->
+@model IPagedList<Tamplate_1.Models.C_Section_Content>
+<!-- Portfolio Grid Section -->
+ 
+
+
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center" style="background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1))">
+                <h1>@ViewBag.searchtrim &nbsp; photos</h1>
+                <br />
+            </div>
+          
+        </div>
+        <br /><br />
+        <div class="row">
+            
+            <a class="scroll-link" href="@Url.Action("Index", "Home")" data-soffset="100">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+            </a>
+            <div id="portfoliopaged">
+                <div class="pagedlist" data-otf-target="#portfoliopaged">
+
+                    @Html.PagedListPager(Model, Page => Url.Action("index", new { ViewBag.searchtrim, Page }), PagedList.Mvc.PagedListRenderOptions.MinimalWithItemCountText)
+                </div>
+                @foreach (var n in Model)
+                {
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+
+                        <a class="portfolio-link" data-toggle="modal" data-target=".@n.Id">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="@Html.DisplayFor(modelItem => n.C_Txt_7)"></i>@*font asowme*@
+                                </div>
+                            </div>
+
+                            <img src="@Html.DisplayFor(modelItem => n.C_Images.C_Link)" title="@Html.DisplayFor(modelItem => n.C_Images.C_Title)" class="img-responsive" alt="@Html.DisplayFor(modelItem => n.C_Images.C_Alt)" />
+
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>@Html.DisplayFor(modelItem => n.C_H4_txt1)</h4>
+                            <p class="text-muted">@Html.DisplayFor(modelItem => n.C_p_txt1)</p>
+                        </div>
+                    </div>
+   
+                }
+            </div>@*end of portfoliopaged*@
+
+        </div>
+    </div>
+</section>
+
+
+<!--END OF PORTFOLIO Section=======================================================================================-->
+ @foreach (var item in Model)
+ {
+    <div class="modal fade @item.Id">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding:8px 14px 4px 8px; border:15px solid black">
+
+                                <!-- Project Details Go Here -->
+                                <h1>@Html.DisplayFor(modelItem => item.C_H1_txt1)</h1>
+                                <p class="item-intro text-muted">@Html.DisplayFor(modelItem => item.C_p_txt2).</p>
+                                <img class="img-responsive img-centered" src="~/@Html.DisplayFor(modelItem => item.C_Images.C_Link)" alt="">
+                                <p>@Html.DisplayFor(modelItem => item.C_p_txt3)</p>
+                                <p>
+                                    <strong>@Html.DisplayFor(modelItem => item.C_p_txt4)</strong>@Html.DisplayFor(modelItem => item.C_H2_txt1) <a href="@Html.DisplayFor(modelItem => item.C_Url_1)">@Html.DisplayFor(modelItem => item.C_Txt_1)</a>, @Html.DisplayFor(modelItem => item.C_Txt_2) <a href="@Html.DisplayFor(modelItem => item.C_Url_3)">@Html.DisplayFor(modelItem => item.C_Txt_3)</a>.
+                                </p>
+                                <ul class="list-inline">
+                                    <li>@Html.DisplayFor(modelItem => item.C_Txt_5)</li>
+                                    <li>@Html.DisplayFor(modelItem => item.C_Txt_6)</li>
+                                </ul>
+ 
+                    </div>
+                </div>
+
+
+            </div>
+       
+
+ }

@@ -1,0 +1,221 @@
+﻿@model Tamplate_1.Models.C_Images
+
+@{
+    ViewBag.Title = "Create";
+}
+<br /><br /><br /><br /><br />
+
+<div class="container-fluid text-center bg-grey">
+
+
+    @using (Html.BeginForm("UploadImg", "ImagesTable", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary();
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>Create New Image</h3>
+        </div>
+    </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+
+                        <div class="adminBorder">
+                            <a href="#"><span class="badge">1</span></a><br>
+                            @Html.Label("select section")<br />
+                            @Html.DropDownList("C_Section_Table")
+                        </div>
+
+                    </div>
+                    <br />
+
+
+                    <div class="col-sm-12 text-center">
+
+                        <div class="adminBorder">
+                            <a href="#"><span class="badge">2</span></a><br>
+                            @Html.Label("select file")<br />
+                            <input type="file" name="file" id="file" />
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="col-sm-12 text-center">
+
+                        <div class="adminBorder">
+                            <a href="#"><span class="badge">3</span></a><br>
+                            @Html.Label("upload file")<br />
+                            <input type="submit" name="submet" value="upload" /><br />
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 text-center">
+                        <div class="adminNoBorder">
+                            <span id="sM" style="color:green;"> @ViewBag.sucsessmsg !</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                }
+                <br /><br />
+
+                @using (Html.BeginForm())
+{
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+
+
+                    <div class="row text-center" style="border:solid;  padding-top:10px; margin:0px 5px 0px 5px;">
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image title")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Title)
+                                    @Html.ValidationMessageFor(model => model.C_Title)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image alt")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Alt)
+                                    @Html.ValidationMessageFor(model => model.C_Alt)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image width")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Width)
+                                    @Html.ValidationMessageFor(model => model.C_Width)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image Hight")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Hight)
+                                    @Html.ValidationMessageFor(model => model.C_Hight)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image link")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.TextBoxFor(model => model.C_Link, new { @Value = @ViewBag.sucsessmsg })
+
+                                    @Html.ValidationMessageFor(model => model.C_Link)
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image section id")
+                                </div>
+                                <div class="editor-field">
+
+                                   
+                                    @if (ViewBag.imid != null)
+                                    {
+                                        @Html.TextBoxFor(model => model.C_Section_Id, new { Value = ViewBag.imid })
+                                    }
+                                    else
+                                    {
+                                        @Html.TextBoxFor(model => model.C_Section_Id, new { Value = "1" })
+                                    }
+                                 
+
+                                    @Html.ValidationMessageFor(model => model.C_Section_Id)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image Description")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Description)
+                                    @Html.ValidationMessageFor(model => model.C_Description)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image Order no")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Order)
+                                    @Html.ValidationMessageFor(model => model.C_Order)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <div class="editor-label">
+                                    @Html.Label("image Display state")
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.C_Display)
+                                    @Html.ValidationMessageFor(model => model.C_Display)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </div>
+
+
+
+
+
+
+
+                    </div>@*End of row*@
+
+}@*end of begin form*@
+<div class="row">
+    <div class="col-sm-12">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+
+</div>@*end of container*@
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

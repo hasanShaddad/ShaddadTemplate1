@@ -1,0 +1,182 @@
+﻿@model Tamplate_1.Models.C_Section_Table
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+ 
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <!-- Container  -->
+    <div class="container-fluid text-center bg-grey">
+        <h2>@Html.DisplayFor(model => model.C_Section_Name)</h2><br>
+        <h4>Edit Page</h4>
+
+        @Html.HiddenFor(model => model.Id)
+        @*section name is hidden not enable for edit to users*@
+        @Html.HiddenFor(model => model.C_Section_Name)
+
+
+        <div class="row text-center" style="border:solid;  padding-top:10px; margin:0px 5px 0px 5px;">
+
+            <div class="col-sm-4">
+                <div class="thumbnail" style="background-color:transparent;">
+                    <div class="editor-label">
+                      <p>section head</p>
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.C_Heading)
+                        @Html.ValidationMessageFor(model => model.C_Heading)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumbnail" style="background-color:transparent;">
+                    <div class="editor-label">
+                      <p>section sub head</p>
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.C_Sub_Heading)
+                        @Html.ValidationMessageFor(model => model.C_Sub_Heading)
+                    </div>
+                </div>
+            </div>
+        @if (Model.Id==1)
+        {
+            
+     
+    <div class="col-sm-4">
+        <div class="thumbnail" style="background-color:transparent;">
+            <div class="editor-label">
+               <p>button text</p>
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.C_Main_Txt_1)
+                @Html.ValidationMessageFor(model => model.C_Main_Txt_1)
+            </div>
+        </div>
+    </div>
+        }
+        else if (Model.Id == 7)
+        {
+
+
+            <div class="col-sm-4">
+                <div class="thumbnail" style="background-color:transparent;">
+                    <div class="editor-label">
+                        <p>company name</p>
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.C_Main_Txt_1)
+                        @Html.ValidationMessageFor(model => model.C_Main_Txt_1)
+                    </div>
+                </div>
+            </div>
+        }
+
+    
+        @if (Model.Id==1)
+        {
+    <div class="col-sm-4">
+        <div class="thumbnail" style="background-color:transparent;">
+            <div class="editor-label">
+               <p>site url</p>
+            </div>
+            <div class="editor-field">
+          
+                    @Html.EditorFor(model => model.C_Main_Txt_5)
+                    @Html.ValidationMessageFor(model => model.C_Main_Txt_5)
+              
+              
+            </div>
+        </div>
+    </div>
+        }
+            <div class="col-sm-4">
+                <div class="thumbnail" style="background-color:transparent;">
+                    <div class="editor-label">
+                       <p>section image in control panel</p>
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.C_Section_Image)
+                        @Html.ValidationMessageFor(model => model.C_Section_Image)
+                    </div>
+                </div>
+            </div>
+
+    
+
+
+    <div class="col-sm-4">
+        <div class="thumbnail" style="background-color:transparent;">
+            <div class="editor-label">
+              <p>Display mode(block - none)</p>
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.C_Display)
+                @Html.ValidationMessageFor(model => model.C_Display)
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-4">
+        <div class="thumbnail" style="background-color:transparent;">
+            <div class="editor-label">
+               <p>order no</p>
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.C_Order)
+                @Html.ValidationMessageFor(model => model.C_Order)
+            </div>
+        </div>
+    </div>
+
+</div>@*end of row*@
+
+                                                    <div class="row text-center">
+     
+                                                        <div class="col-sm-4"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="thumbnail" style="background-color:transparent;">
+                                                                <p>
+                                                                    <input type="submit" value="Save"/>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>@*end of row2*@
+
+                                                        <div class="row text-center">
+                                                            <div class="col-sm-4"></div>
+                                                            <div class="col-sm-4">
+                                                                <div class="thumbnail" style="background-color:transparent;">
+                                                                    <div>
+                                                                        @Html.ActionLink("Back to List", "Index")
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>@*end of row3*@
+
+                                            </div>@*EndContext of container*@
+                                           
+
+                                            }
+
+
+                                          
+
+
+                                            @section Scripts {
+                                                @Scripts.Render("~/bundles/jqueryval")
+                                            }
+
+
+
+
+          

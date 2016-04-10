@@ -1,0 +1,15 @@
+﻿Disallow: /sections
+Disallow: /sections/edit
+Disallow: /sections/details
+Disallow: /section_content
+Disallow: /Section_content/Edit
+Disallow: /Section_content/Edit/1
+Disallow: /Section_content/Edit/2
+Disallow: /Section_content/Edit/3
+Disallow: /Section_content/Edit/4
+Disallow: /Section_content/details
+Disallow: /Section_content/details/1
+Disallow: /Section_content/details/2
+Disallow: /Section_content/details/3
+Disallow: /Section_content/details/4
+Disallow: /Section_content/details/5

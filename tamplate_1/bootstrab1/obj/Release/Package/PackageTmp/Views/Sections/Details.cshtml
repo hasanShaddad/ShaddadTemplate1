@@ -1,0 +1,166 @@
+﻿@model Tamplate_1.Models.C_Section_Table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+ <br /><br /><br /><br />
+
+
+
+
+
+ 
+
+@{string Disp_Check = "none";}
+
+@if (Model.C_Display=="block")
+{
+   Disp_Check ="showen" ;
+}
+
+
+<!-- Container  -->
+<div class="container-fluid text-center bg-grey">
+    <h2>@Html.DisplayFor(model => model.C_Section_Name) </h2><br />
+    <h4>Detales page</h4>
+
+
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>section name</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Section_Name)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 1</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Heading)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 1</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Sub_Heading)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail"> 
+                <p><strong>text no 1</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Txt_1)</p>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 2</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Txt_2)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 3</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Txt_3)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 4</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Txt_4)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>text no 5</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Txt_5)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>image no 1</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Section_Image)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>image no 1</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Img_1)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>image no 2</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Img_2)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>image no 3</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Img_3)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>image no 4</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Main_Img_4)</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>display status</strong></p>
+                <p>@Disp_Check</p>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <p><strong>order no</strong></p>
+                <p>@Html.DisplayFor(model => model.C_Order)</p>
+            </div>
+        </div>
+
+
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

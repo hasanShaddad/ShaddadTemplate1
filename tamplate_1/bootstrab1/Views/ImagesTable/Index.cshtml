@@ -1,0 +1,240 @@
+﻿@model IEnumerable<Tamplate_1.Models.C_Images>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br /><br /><br /><br />
+
+ 
+    
+    <div class="container-fluid text-center bg-grey">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>photos page</h2>
+
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+            </div>
+            </div>
+            <br /><br />
+
+            @foreach (var item in Model)
+            {
+
+                <div class="row text-center" style="border:solid;  padding-top:10px; margin:0px 5px 0px 5px;">
+
+
+                    @if (item.C_Title != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Title</h4>
+                                @Html.DisplayFor(modelItem => item.C_Title)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Title</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Alt != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Altter</h4>
+                                @Html.DisplayFor(modelItem => item.C_Alt)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Altter</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Width != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Width</h4>
+                                @Html.DisplayFor(modelItem => item.C_Width)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Width</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Hight != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Hight</h4>
+                                @Html.DisplayFor(modelItem => item.C_Hight)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Hight</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Link != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Link</h4>
+                                @Html.DisplayFor(modelItem => item.C_Link)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Link</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Section_Id != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Section_Id</h4>
+                                @Html.DisplayFor(modelItem => item.C_Section_Id)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Section_Id</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Description != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Description</h4>
+                              @Html.DisplayFor(modelItem => item.C_Description)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Description</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Order != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Order no</h4>
+                                @Html.DisplayFor(modelItem => item.C_Order)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Order no</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Display != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Display state</h4>
+                                @Html.DisplayFor(modelItem => item.C_Display)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image Display state</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (item.C_Link != null)
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image demo</h4>
+                                <img src="/@Html.DisplayFor(modelItem => item.C_Link)" width="50" />
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <h4>Image demo</h4>
+                                <h3>EMPTY</h3>
+                            </div>
+                        </div>
+                    }
+
+ 
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+
+                    </div>
+                    <br /><br />
+                </div>
+ 
+    
+            }
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <a class="page-scroll" href="@Url.Action("Index", "MyAdmin")"><h4>home admin page</h4></a>
+    </div>
+    </div>
+    <br /><br />
+</div>
+
+ 

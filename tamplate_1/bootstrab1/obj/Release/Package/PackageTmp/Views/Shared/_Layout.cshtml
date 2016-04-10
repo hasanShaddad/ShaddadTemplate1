@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+         @*meta tags*@
+        <meta charset="utf-8"> @*for encoding*@
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> @*for boot strap*@
+        <meta name="description" content="">
+    <meta name="keywords" content="shaddadsoft,shaddad,software,website,Web design egypt, web design, web companies egypt, website development,  website development egypt, websites creation egypt, web design agency, website design, web applications, web portals, multimedia design,  online advertising egypt, online marketing egypt,  Digital Media Agency egypt, Digital Media Agency, outsourced IT services, CRM solutions, ERP Solutions, online presence solutions, corporate websites, egypt web, web egypt design, digital marketing, digital meda, social media, media buying, online campaign, IT solutions, digital marketing agency egypt, social media agency egypt, digital marketing agency, social media agency, ecommerce website, ecommerce website development, e-commerce website, e-commerce website development," />
+        <meta name="author" content="ShaddadSoft">  
+        @*end of meta tags*@
+
+    @*<title>@ViewBag.Title - My ASP.NET MVC Application</title>*@
+        <title> shaddadsoft-web-sites </title>
+ 
+    @*favicons links*@
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    @*end of favicons links*@
+
+    @*main bootstrap css*@
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+  
+    @*end of main bootstrap css*@
+
+    @*/scripts for galleria/galleria*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="~/css/galleria/galleria.classic.css" rel="stylesheet" />
+    <script src="~/Scripts/galleria/galleria-1.4.2.min.js"></script>
+    <script src="~/Scripts/galleria/plugins/facebook/galleria.facebook.js"></script>
+    @*/end of scripts for galleria/galleria*@
+    </head>
+
+  @*----------------------------------------------------------------------------------------*@
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+
+    @* render body*@
+    <div id="body">
+        @RenderSection("featured", required: false)
+        @RenderBody()
+    </div>
+    @* render body*@
+
+    @*------------------------------------------------------------------------------------------*@
+
+    @*render jquery and scripts*@
+
+    @RenderSection("scripts", required: false)
+
+    @*------------------------------------------------------------------------------------------*@
+    @* render view footer*@
+    @{ Html.RenderAction("Index", "Footer"); }
+    @* end of render view footer*@
+    @*------------------------------------------------------------------------------------------*@
+
+    @*render google and font awesome fonts*@
+    <link href="~/font-awesome/font-awesome.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    @*end of render google fonts*@
+    @*------------------------------------------------------------------------------------------*@
+
+    @*google analytics*@
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72196047-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    @*end of google analytics*@
+
+    @*start google maps script*@
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initialize();
+        });
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(@ViewBag.maplocation),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+              mapOptions);
+            // create a marker
+            var latlng = new google.maps.LatLng('@ViewBag.maplocation');
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: 'SHADDAD SOFT',
+                draggable: false
+            });
+            infoWindow = new google.maps.InfoWindow({
+                content: ""
+            });
+            var image = "/Images/contact/marker.png";
+            // create a marker
+            var latlng = new google.maps.LatLng(@ViewBag.maplocation);
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: 'shaddad soft',
+                icon: image
+            });
+            infoWindow.open(map, marker);
+            geocoder = new google.maps.Geocoder();
+            //Update postal address when the marker is dragged
+            google.maps.event.addListener(marker, 'click', function () { //dragend
+                geocoder.geocode({ latLng: marker.getPosition() }, function (responses) {
+                    if (responses && responses.length > 0) {
+                        infoWindow.setContent(
+                        "<div style=\"font-size:smaller;\">" + responses[0].formatted_address
+                        + "<br />"
+                        + "Latitude: " + marker.getPosition().lat() + "&nbsp"
+                        + "Longitude: " + marker.getPosition().lng() + "</div>"
+                        );
+                        infoWindow.open(map, marker);
+                    } else {
+                        alert('Error: Google Maps could not determine the address of this location.');
+                    }
+                });
+                map.panTo(marker.getPosition());
+            });
+            // Close the marker window when being dragged
+            google.maps.event.addListener(marker, 'dragstart', function () {
+                infoWindow.close(map, marker);
+            });
+
+        }
+    </script>
+    @*end of google maps script*@
+
+
+    <script type="application/ld+json">
+        {
+        "context": "http://schema.org",
+        "type": "Organization",
+        "url": "http://shaddadsoft.com",
+        "logo": "http://shaddadsoft.com/favicon-96x96.png",
+        "name" : "shaddadsoft",
+        "url" : "http://www.your-site.com",
+        "sameAs" : [
+        "https://www.facebook.com/shaddad0122523430",
+        "https://twitter.com/hasanshaddad",
+        "https://plus.google.com/117728439910083971148"
+        ]
+        }
+    </script>
+
+</body>
+
+</html>

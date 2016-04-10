@@ -1,0 +1,11 @@
+﻿ <!--PORTFOLIO=Section======================================================================================-->
+<!-- Portfolio Grid Section -->
+@model IPagedList<Tamplate_1.Models.C_Section_Content>
+  <!-- Portfolio Grid Section -->
+
+<form method="get" action="@Url.Action("Index")" data-otf-ajax="true" data-otf-target="#portfoliopaged">
+
+</form>
+
+
+ @Html.Partial("PortfolioPged", Model)

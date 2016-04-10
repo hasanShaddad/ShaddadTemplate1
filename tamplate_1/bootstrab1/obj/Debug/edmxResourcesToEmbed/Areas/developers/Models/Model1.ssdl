@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpaDbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="_Footer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="_Name" Type="nvarchar(max)" />
+    <Property Name="_Description" Type="nvarchar(max)" />
+    <Property Name="_Image" Type="nvarchar(max)" />
+    <Property Name="_Link" Type="nvarchar(max)" />
+    <Property Name="_Alt" Type="nvarchar(max)" />
+    <Property Name="_Title" Type="nvarchar(max)" />
+    <Property Name="_Display" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="_Images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="_Title" Type="nvarchar(max)" />
+    <Property Name="_Alt" Type="nvarchar(max)" />
+    <Property Name="_Width" Type="int" />
+    <Property Name="_Hight" Type="int" />
+    <Property Name="_Link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="_Description" Type="nvarchar(max)" />
+    <Property Name="_Order" Type="int" />
+    <Property Name="_Display" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Section_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="_Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="_String&#xD;&#xA;_String&#xD;&#xA;_String&#xD;&#xA;_String" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Link" Type="nvarchar(max)" />
+    <Property Name="_Li" Type="nvarchar(max)" />
+    <Property Name="_Title" Type="nvarchar(max)" />
+    <Property Name="_Img" Type="nvarchar(max)" />
+    <Property Name="_ToolTip" Type="nvarchar(max)" />
+    <Property Name="_Main_Id" Type="int" />
+    <Property Name="_Has_sub" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Display" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Alt" Type="nvarchar(max)" />
+    <Property Name="_Pro_Ico" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="_Section_Content">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="_Section_Id" Type="int" Nullable="false" />
+    <Property Name="_Txt_1" Type="nvarchar(max)" />
+    <Property Name="_Txt_2" Type="nvarchar(max)" />
+    <Property Name="_Txt_3" Type="nvarchar(max)" />
+    <Property Name="_Txt_4" Type="nvarchar(max)" />
+    <Property Name="_Txt_5" Type="nvarchar(max)" />
+    <Property Name="_Txt_6" Type="nvarchar(max)" />
+    <Property Name="_Txt_7" Type="nvarchar(max)" />
+    <Property Name="_Txt_8" Type="nvarchar(max)" />
+    <Property Name="_Url_1" Type="nvarchar(max)" />
+    <Property Name="_Url_2" Type="nvarchar(max)" />
+    <Property Name="_Url_3" Type="nvarchar(max)" />
+    <Property Name="_Url_4" Type="nvarchar(max)" />
+    <Property Name="_Url_5" Type="nvarchar(max)" />
+    <Property Name="_Url_6" Type="nvarchar(max)" />
+    <Property Name="_Url_7" Type="nvarchar(max)" />
+    <Property Name="_Url_8" Type="nvarchar(max)" />
+    <Property Name="_Img_1" Type="int" />
+    <Property Name="_Img_2" Type="int" />
+    <Property Name="_Img_3" Type="int" />
+    <Property Name="_Img_4" Type="int" />
+    <Property Name="_Img_5" Type="int" />
+    <Property Name="_Img_6" Type="int" />
+    <Property Name="_Img_7" Type="int" />
+    <Property Name="_Img_8" Type="int" />
+    <Property Name="_Description" Type="nvarchar(max)" />
+    <Property Name="_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="_Section_Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="_Section_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Main_Txt_1" Type="nvarchar(max)" />
+    <Property Name="_Main_Txt_2" Type="nvarchar(max)" />
+    <Property Name="_Main_Txt_3" Type="nvarchar(max)" />
+    <Property Name="_Main_Txt_4" Type="nvarchar(max)" />
+    <Property Name="_Main_Txt_5" Type="nvarchar(max)" />
+    <Property Name="_Main_Img_1" Type="nvarchar(max)" />
+    <Property Name="_Main_Img_2" Type="nvarchar(max)" />
+    <Property Name="_Main_Img_3" Type="nvarchar(max)" />
+    <Property Name="_Main_Img_4" Type="nvarchar(max)" />
+    <Property Name="_Display" Type="nvarchar" MaxLength="50" />
+    <Property Name="_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Section_Content__Images">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images1">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images2">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images3">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images4">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images5">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images6">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images7">
+    <End Role="_Images" Type="Self._Images" Multiplicity="0..1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Img_8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Section_Table">
+    <End Role="_Section_Table" Type="Self._Section_Table" Multiplicity="1" />
+    <End Role="_Section_Content" Type="Self._Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_Section_Table">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="_Section_Content">
+        <PropertyRef Name="_Section_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SpaDbModel1StoreContainer">
+    <EntitySet Name="_Footer" EntityType="Self._Footer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_Images" EntityType="Self._Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_Menu" EntityType="Self._Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_Section_Content" EntityType="Self._Section_Content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_Section_Table" EntityType="Self._Section_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Section_Content__Images" Association="Self.FK__Section_Content__Images">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images1" Association="Self.FK__Section_Content__Images1">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images2" Association="Self.FK__Section_Content__Images2">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images3" Association="Self.FK__Section_Content__Images3">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images4" Association="Self.FK__Section_Content__Images4">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images5" Association="Self.FK__Section_Content__Images5">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images6" Association="Self.FK__Section_Content__Images6">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images7" Association="Self.FK__Section_Content__Images7">
+      <End Role="_Images" EntitySet="_Images" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Section_Table" Association="Self.FK__Section_Content__Section_Table">
+      <End Role="_Section_Table" EntitySet="_Section_Table" />
+      <End Role="_Section_Content" EntitySet="_Section_Content" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Tamplate_1.Models.C_Section_Table>
+
+ 
+    
+       
+            <ul class="headerbuttonul">
+               
+                <li class="headerbuttonli"><a href="@Url.Action("Index", "Home")#Header" class="round other">Home<span class="round">press here to go home.</span></a></li>
+
+
+
+                @foreach (var Itm in Model.OrderBy(c => c.C_Order))
+                {
+                    if (Itm.C_Display == "block" && Itm.C_Section_Name != "Header" && Itm.C_Section_Name != "Footer")
+                    {
+
+
+                        <li class="headerbuttonli"><a href="@Url.Action("Index", "Home")#@Itm.C_Section_Name" class="round @Itm.C_Section_Name">@Itm.C_Section_Name<span class="round">press to go to : @Itm.C_Section_Name.</span></a></li>
+
+
+                    }
+
+                }
+
+          
+
+
+            </ul>
+
+
+
+         
+   
+ 

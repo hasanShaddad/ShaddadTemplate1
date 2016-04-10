@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="14a9927d13f64001af68acd1942b250e" Name="Diagram1">
+        <EntityTypeShape EntityType="ShaddadDbModel.C_Footer" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaddadDbModel.C_Images" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaddadDbModel.C_Menu" Width="1.5" PointX="5.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaddadDbModel.C_Section_Content" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaddadDbModel.C_Section_Table" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaddadDbModel.Themes" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images2" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images3" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images4" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images5" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images6" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Images7" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Content__Section_Table1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShaddadDbModel.FK__Section_Table__Section_Table" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

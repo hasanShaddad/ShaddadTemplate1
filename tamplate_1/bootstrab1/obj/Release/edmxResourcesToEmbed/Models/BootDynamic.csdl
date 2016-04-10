@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpaDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="C_Footer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Alt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="C_Images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Alt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Width" Type="Int32" />
+    <Property Name="C_Hight" Type="Int32" />
+    <Property Name="C_Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_Section_Id" Type="Int32" />
+    <Property Name="C_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Order" Type="Int32" />
+    <Property Name="C_Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="C_Section_Content" Relationship="SpaDbModel.FK__Section_Content__Images" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content1" Relationship="SpaDbModel.FK__Section_Content__Images1" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content2" Relationship="SpaDbModel.FK__Section_Content__Images2" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content3" Relationship="SpaDbModel.FK__Section_Content__Images3" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content4" Relationship="SpaDbModel.FK__Section_Content__Images4" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content5" Relationship="SpaDbModel.FK__Section_Content__Images5" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content6" Relationship="SpaDbModel.FK__Section_Content__Images6" FromRole="C_Images" ToRole="C_Section_Content" />
+    <NavigationProperty Name="C_Section_Content7" Relationship="SpaDbModel.FK__Section_Content__Images7" FromRole="C_Images" ToRole="C_Section_Content" />
+  </EntityType>
+  <EntityType Name="C_Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_String___String___String___String" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Li" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_ToolTip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Id" Type="Int32" />
+    <Property Name="C_Has_sub" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_Alt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Pro_Ico" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="C_Section_Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Section_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Txt_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Txt_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Txt_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Txt_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Txt_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Img_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Img_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Img_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Main_Img_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="C_Order" Type="Int32" />
+    <NavigationProperty Name="C_Section_Content" Relationship="SpaDbModel.FK__Section_Content__Section_Table" FromRole="C_Section_Table" ToRole="C_Section_Content" />
+  </EntityType>
+  <EntityContainer Name="SpaDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_Footer" EntityType="Self.C_Footer" />
+    <EntitySet Name="C_Images" EntityType="Self.C_Images" />
+    <EntitySet Name="C_Menu" EntityType="Self.C_Menu" />
+    <EntitySet Name="C_Section_Table" EntityType="Self.C_Section_Table" />
+    <EntitySet Name="C_Section_Content" EntityType="SpaDbModel.C_Section_Content" />
+    <EntitySet Name="sysdiagrams" EntityType="SpaDbModel.sysdiagrams" />
+    <AssociationSet Name="FK__Section_Content__Images" Association="SpaDbModel.FK__Section_Content__Images">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images1" Association="SpaDbModel.FK__Section_Content__Images1">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images2" Association="SpaDbModel.FK__Section_Content__Images2">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images3" Association="SpaDbModel.FK__Section_Content__Images3">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images4" Association="SpaDbModel.FK__Section_Content__Images4">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images5" Association="SpaDbModel.FK__Section_Content__Images5">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images6" Association="SpaDbModel.FK__Section_Content__Images6">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Images7" Association="SpaDbModel.FK__Section_Content__Images7">
+      <End Role="C_Images" EntitySet="C_Images" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section_Content__Section_Table" Association="SpaDbModel.FK__Section_Content__Section_Table">
+      <End Role="C_Section_Table" EntitySet="C_Section_Table" />
+      <End Role="C_Section_Content" EntitySet="C_Section_Content" />
+    </AssociationSet>
+    <EntitySet Name="Colors" EntityType="SpaDbModel.Colors" />
+  </EntityContainer>
+  <EntityType Name="C_Section_Content">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Section_Id" Type="Int32" Nullable="false" />
+    <Property Name="C_Txt_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Txt_8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Url_8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Img_1" Type="Int32" />
+    <Property Name="C_Img_2" Type="Int32" />
+    <Property Name="C_Img_3" Type="Int32" />
+    <Property Name="C_Img_4" Type="Int32" />
+    <Property Name="C_Img_5" Type="Int32" />
+    <Property Name="C_Img_6" Type="Int32" />
+    <Property Name="C_Img_7" Type="Int32" />
+    <Property Name="C_Img_8" Type="Int32" />
+    <Property Name="C_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Order" Type="Int32" />
+    <NavigationProperty Name="C_Images" Relationship="SpaDbModel.FK__Section_Content__Images" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images1" Relationship="SpaDbModel.FK__Section_Content__Images1" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images2" Relationship="SpaDbModel.FK__Section_Content__Images2" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images3" Relationship="SpaDbModel.FK__Section_Content__Images3" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images4" Relationship="SpaDbModel.FK__Section_Content__Images4" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images5" Relationship="SpaDbModel.FK__Section_Content__Images5" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images6" Relationship="SpaDbModel.FK__Section_Content__Images6" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Images7" Relationship="SpaDbModel.FK__Section_Content__Images7" FromRole="C_Section_Content" ToRole="C_Images" />
+    <NavigationProperty Name="C_Section_Table" Relationship="SpaDbModel.FK__Section_Content__Section_Table" FromRole="C_Section_Content" ToRole="C_Section_Table" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Section_Content__Images">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images1">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images2">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images3">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images4">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images5">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images6">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Images7">
+    <End Type="SpaDbModel.C_Images" Role="C_Images" Multiplicity="0..1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Images">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Img_8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section_Content__Section_Table">
+    <End Type="SpaDbModel.C_Section_Table" Role="C_Section_Table" Multiplicity="1" />
+    <End Type="SpaDbModel.C_Section_Content" Role="C_Section_Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_Section_Table">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="C_Section_Content">
+        <PropertyRef Name="C_Section_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Color1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Color2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Color3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Color4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Color5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="C_Color6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

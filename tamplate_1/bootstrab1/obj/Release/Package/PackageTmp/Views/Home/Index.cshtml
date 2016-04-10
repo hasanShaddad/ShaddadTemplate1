@@ -1,0 +1,632 @@
+﻿@model Tamplate_1.Models.AllTables
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@if (Request.Browser.IsMobileDevice && Request.HttpMethod == "GET")
+{
+
+    <nav class="navbar navbar-default navbar-fixed-top cbp-af-header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <br />
+               @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Header"))
+               {
+               <span class="logoSpan"> @item.C_Heading</span>     
+               }   
+        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+                @* render view menu*@
+                @{ Html.RenderAction("Menu", "Menus"); }
+                @* end of render view menu*@
+
+                <br /><br /><br />
+            </div>
+        </div>
+    </nav>
+
+}
+
+    @*================================================header==========================================================*@
+
+
+    @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Header"))
+    {
+        string hassan;
+
+        <div id="Header" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+            @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+            {
+                if (Request.Browser.IsMobileDevice && Request.HttpMethod == "GET")
+                {
+                    <header style="background-image:url(mobile/@Html.DisplayFor(modelItem => n.C_Images7.C_Link)); text-align: center;  color:#@Html.DisplayFor(modelItem => n.C_Txt_6) ;   background-attachment: scroll;   background-position: center center;   background-repeat: none;   -webkit-background-size: cover;   -moz-background-size: cover;   background-size: cover;  -o-background-size: cover;  padding-top:50px;  padding-bottom: 20px;">
+
+
+                        <div id="top" class="container">
+                            <div class="intro-text">
+                                <br /><br /><br />
+                                <div class="intro-lead-in">@Html.DisplayFor(modelItem => n.C_p_txt1)</div>
+                                <div class="intro-heading">@Html.DisplayFor(modelItem => n.C_Txt_1)</div>
+                                <br />
+                                @Html.Action("ExternalLoginsList", "Account", new { ReturnUrl = ViewBag.ReturnUrl })
+                                <br />
+                                @Html.Partial("_LoginPartial")
+                                <br /><br /><br /><br /><br />
+                                <br /><br /><br /> <br />
+
+                            </div>
+                        </div>
+                    </header>
+                }
+                else
+                {   <header style="background:linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(@Html.DisplayFor(modelItem => n.C_Images7.C_Link)) ; text-align: center;  color: #FCE301;   background-attachment: scroll;   background-position: center center;   background-repeat: none;   -webkit-background-size: cover;   -moz-background-size: cover;   background-size: cover;  -o-background-size: cover; padding-top:300px;">
+
+                    <div id="top" class="container">
+
+
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            </ol>
+                            <div class="col-lg-12 text-center">
+                                <nav class="navbar navbar-default navbar-fixed-top cbp-af-header role=" navigation"">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header page-scroll">
+                                        
+                                            <div class="logdiv">
+                                                 
+                                                    @Html.Action("ExternalLoginsList", "Account", new { ReturnUrl = ViewBag.ReturnUrl }) 
+                                                <br />
+                                                    @Html.Partial("_LoginPartial")
+</div>
+                                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                                @* render view menu*@
+                                                @{ Html.RenderAction("Menu", "Menus"); }
+                                                @* end of render view menu*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+
+                            </div>
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+
+
+                                            <div class="item active">
+                                                <div class="col-lg-12 text-center">
+                                                    @if (n.C_Images != null)
+                                                    {
+
+
+
+                                                        <span class="headerspan">
+                                                            @Html.DisplayFor(modelItem => n.C_Txt_1)
+                                                        </span>
+                                                        <h3>@Html.DisplayFor(modelItem => n.C_p_txt1)</h3>
+
+                                                        <img src="@Html.DisplayFor(modelItem => n.C_Images.C_Link)" width="240" height="240" />
+                                                    }
+                                                </div>
+                                            </div>
+                                            @if (n.C_Images1 != null)
+                                            {
+                                                <div class="item">
+                                                    <div class="col-lg-12 text-center">
+
+                                                        <span class="headerspan">
+                                                            @Html.DisplayFor(modelItem => n.C_Txt_2)
+                                                        </span>
+                                                        <h3>@Html.DisplayFor(modelItem => n.C_p_txt2)</h3>
+                                                        <img src="@Html.DisplayFor(modelItem => n.C_Images1.C_Link)" width="240" height="240" />
+
+                                                    </div>
+                                                </div>
+                                            }
+                                            @if (n.C_Images2 != null)
+                                            {
+                                                <div class="item">
+                                                    <div class="col-lg-12 text-center">
+
+                                                        <span class="headerspan">
+                                                            @Html.DisplayFor(modelItem => n.C_Txt_3)
+                                                        </span>
+                                                        <h3>@Html.DisplayFor(modelItem => n.C_p_txt3)</h3>
+                                                        <img src="@Html.DisplayFor(modelItem => n.C_Images2.C_Link)" width="240" height="240" />
+
+                                                    </div>
+                                                </div>
+                                            }
+                                            @if (n.C_Images3 != null)
+                                            {
+                                                <div class="item">
+                                                    <div class="col-lg-12 text-center">
+
+                                                        <span class="headerspan">
+                                                            @Html.DisplayFor(modelItem => n.C_Txt_4)
+                                                        </span>
+                                                        <h3>@Html.DisplayFor(modelItem => n.C_p_txt4)</h3>
+                                                        <img src="@Html.DisplayFor(modelItem => n.C_Images3.C_Link)" width="240" height="240" />
+
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+                                        <br /><br /><br /><br />
+                                        <!-- Left and right controls -->
+                                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                        <br /><br />
+
+
+                                    </div>
+                            </div>
+                </header> }
+
+            }
+        </div>
+    }
+    <!-- Services Section ======================================================================================-->
+    @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Services"))
+    {
+        <section id="@Html.DisplayFor(modelItem => item.C_Section_Name)"   style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+            <div class="container fix">
+
+                <div class="row add-top-main">
+                    @*-----main*@
+
+                    <div class="col-lg-12 text-center">
+                        <article class="span12">
+                            <div class="thumb-icon"><i class="fa fa-briefcase fa-5x icon-a"></i></div>
+                            <h1 class="main-heading"><span>@Html.DisplayFor(modelItem => item.C_Heading)</span></h1>
+                            <h3 class="promo-text-alt darken"><span>@Html.DisplayFor(modelItem => item.C_Sub_Heading)</span></h3>
+
+                        </article>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row add-top add-bottom-services">
+                    @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                    {
+
+                        <div class="col-md-4">
+                            <article class="span4 service-block text-center">
+                                <div class="service-thumb text-center">
+
+                                    <a> <i class="@Html.DisplayFor(modelItem => n.C_Txt_7) icon-a"></i></a>
+
+                                </div>
+                                <h3 class="inner-heading"><span>@Html.DisplayFor(modelItem => n.C_Heading)</span></h3>
+                                <p>@Html.DisplayFor(modelItem => n.C_p_txt1)</p>
+                                <a href="#" class="btn btn-renova">@Html.DisplayFor(modelItem => n.C_Txt_1)</a>
+                            </article>
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+        </section>
+    }
+
+    <!--end of serveces section=================================================================================================-->
+    <!--PORTFOLIO=Section======================================================================================-->
+    <!-- Portfolio Grid Section -->
+    @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "portfolio"))
+    {
+        <section id="@Html.DisplayFor(modelItem => item.C_Section_Name)" class="bg-light-gray" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="main-heading">
+                            <span>
+                                @Html.DisplayFor(modelItem => item.C_Heading)
+                            </span>
+                        </h1>
+                        <h3 class="promo-text-alt darken"><span>@Html.DisplayFor(modelItem => item.C_Sub_Heading) </span></h3>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <nav id="intro-nav">
+                        <ul class="ca-menu">
+                            @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id & r.C_So_Search_Trim_1 == "main"))
+                            {
+
+
+
+                                <div class="col-lg-3 text-center">
+                                    <li>
+                                        <a class="scroll-link" href="@Url.Action("Index", "portfolio" , new { searchtrim=n.C_So_Search_Trim_2})" data-soffset="100">
+                                            <span class="ca-icon"><img alt="@Html.DisplayFor(modelItem => n.C_Images.C_Alt)" title="@Html.DisplayFor(modelItem => n.C_Images.C_Title)" src="@Html.DisplayFor(modelItem => n.C_Images.C_Link)"></span>
+                                            <div class="ca-content">
+                                                <h2 class="ca-main">@Html.DisplayFor(modelItem => n.C_Heading)</h2>
+                                                <h3 class="ca-sub">@Html.DisplayFor(modelItem => n.C_p_txt1)<br /><br /><br /><br /><br /><br />@Html.DisplayFor(modelItem => n.C_p_txt1)</h3>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                            }
+                        </ul>
+
+                    </nav>
+
+                </div>
+            </div>
+        </section>
+    }
+    <!--END OF PORTFOLIO Section=======================================================================================-->
+ <!--news=Section======================================================================================-->
+  
+    @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "News"))
+    {
+        <div id="@Html.DisplayFor(modelItem => item.C_Section_Name)" class="bg-dark master-section" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+          
+                <div class="row-fluid">
+                    <div class="container">
+
+
+                        <div class="row add-top-main">
+                            <article class="span12">
+                                <h1 class="main-heading"><span>@Html.DisplayFor(modelItem => item.C_Heading)</span></h1>
+                                <h3 class="promo-text"><span>@Html.DisplayFor(modelItem => item.C_Sub_Heading) </span></h3>
+                            </article>
+                        </div>
+
+
+
+
+
+
+                        <div class="row">
+
+                            @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                            {
+
+                                <div class="col-lg-4 news-block">
+                                    <div class="row-fluid">
+                                        <article class="span12 news-img">
+                                            <div class="news-date" style="overflow: hidden; display: block;">
+                                                <h2>@Html.DisplayFor(modelItem => n.C_H2_txt1)</h2>
+                                                <h4>@Html.DisplayFor(modelItem => n.C_H4_txt1)</h4>
+                                                <h4>@Html.DisplayFor(modelItem => n.C_H4_txt2)</h4>
+                                            </div>
+                                            <img class="news-img"  alt="@Html.DisplayFor(modelItem => n.C_Images.C_Alt)" title="@Html.DisplayFor(modelItem => n.C_Images.C_Title)" src="@Html.DisplayFor(modelItem => n.C_Images.C_Link)">
+                                        </article>
+                                    </div>
+                                    <div>
+                                        <div class="row-fluid">
+                                            <article class="span12 news-specs">
+                                                <nav>
+                                                    <a href="#">
+                                                      
+                                                        <span class="news-specs-info">&nbsp; <i class="@Html.DisplayFor(modelItem => n.C_Txt_7)"></i> &nbsp;@Html.DisplayFor(modelItem => n.C_Txt_1)</span>
+                                                       
+                                                    </a>
+                                                    <a href="#">
+                                                        <span class="news-specs-info">&nbsp; <i class="@Html.DisplayFor(modelItem => n.C_Txt_8)"></i> &nbsp;@Html.DisplayFor(modelItem => n.C_Txt_2)</span>
+
+                                                    </a>
+
+                                                </nav>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <article class="span12 news-block-content">
+                                            <h3 class="news-heading"><span>@Html.DisplayFor(modelItem => n.C_Heading)</span></h3>
+                                            <p>@Html.DisplayFor(modelItem => n.C_p_txt1)</p>
+                                            <a href="#" class="btn btn-renova-alt">@Html.DisplayFor(modelItem => n.C_Txt_3)</a>
+                                        </article>
+                                    </div>
+
+                                </div>
+                                
+                            }@*end of content*@
+
+                        </div><!--row end-->
+
+                    </div><!--/ container-->
+                </div><!--/ row-fluid-->
+            </div><!--/ container-->
+
+         
+    }@*end of section*@
+  <!--end of news=======================================-====================================================-->
+ 
+
+
+
+
+
+     <!--time line events=======================================-====================================================-->
+<!-- events Section -->
+
+
+@foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Events"))
+{
+    <section id="@Html.DisplayFor(modelItem => item.C_Section_Name)" class="bg-light-gray" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+
+
+
+
+
+
+        <div class="container">
+            <div class="row add-top add-bottom-services">
+                <div class="col-lg-12 text-center">
+                    <h1 class="main-heading">
+                        <span>
+                            @Html.DisplayFor(modelItem => item.C_Heading)
+                        </span>
+                    </h1>
+                    <h3 class="promo-text-alt darken"><span>@Html.DisplayFor(modelItem => item.C_Sub_Heading)</span></h3>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <ul class="cbp_tmtimeline">
+                        @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                        {
+
+                            <li>
+                                <a href="@Html.DisplayFor(modelItem => n.C_Url_1)"  >
+                                    <div class="cbp_tmicon" style="background:#364b60 url(../@Html.DisplayFor(modelitem=> n.C_Images.C_Link)) ;"></div></a>
+                                    <div class="cbp_tmlabel col-white">
+                                        <h3>@Html.DisplayFor(modelItem => n.C_Txt_6)</h3>
+                                        <h3>@Html.DisplayFor(modelItem => n.C_Heading)</h3>
+                                        <p>@Html.DisplayFor(modelItem => n.C_p_txt1). </p>
+                                    </div>
+</li>
+
+                        }
+
+
+                        <li>
+                            <div class="cbp_tmiconEnd">join <br />us</div>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+        <!--end of time line events==================================================-->
+
+        <!-- Contact Section -->
+        @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Contact"))
+    {
+            <section id="@Html.DisplayFor(modelItem => item.C_Section_Name)" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="section-heading">@Html.DisplayFor(modelItem => item.C_Heading)</h2>
+                            <h3 class="section-subheading text-muted">@Html.DisplayFor(modelItem => item.C_Sub_Heading)</h3>
+                        </div>
+
+                    </div>
+
+
+
+
+                    @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id).Take(1))
+                {
+
+                        <div class="row">
+                            <div id="map-outer" class="col-md-12">
+                                <div id="address" class="col-md-4">
+                                    <h2>@Html.DisplayFor(modelItem => n.C_Heading)</h2>
+                                    <address>
+                                        <strong>@Html.DisplayFor(modelItem => n.C_Sub_Heading)</strong><br>
+                                        @Html.DisplayFor(modelItem => n.C_p_txt1)<br>
+                                        @Html.DisplayFor(modelItem => n.C_p_txt2)<br>
+                                        @Html.DisplayFor(modelItem => n.C_p_txt3)<br>
+                                        @Html.DisplayFor(modelItem => n.C_p_txt4)
+                                        <br>
+                                        <abbr>@Html.DisplayFor(modelItem => n.C_Txt_1)</abbr> @Html.DisplayFor(modelItem => n.C_Txt_2)
+                                        <br>
+                                        <abbr>@Html.DisplayFor(modelItem => n.C_Txt_3)</abbr> @Html.DisplayFor(modelItem => n.C_Txt_4)
+
+                                    </address>
+                                </div>
+                                <div id="map-container" class="col-md-8">
+
+                                    <div id="map_canvas" style=" height:250px; text-align:center;"> @Html.DisplayFor(modelItem => n.C_Url_4)</div>
+                                </div>
+                            </div><!-- /map-outer -->
+                        </div> <!-- /row -->
+                }@*end of content*@
+                <div class="row">
+
+                    @using (Html.BeginForm("Send", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary()
+                        <div class="form-group">
+                            <div class="col-md-4">
+
+                                @Html.TextBoxFor(model => model.First_Name, new { @class = "form-control", placeholder = "First Name" })
+                            </div>
+                            <div class="col-md-4">
+
+                                @Html.TextBoxFor(model => model.Last_Name, new { @class = "form-control", placeholder = "Last Name" })
+                            </div>
+                            <div class="col-md-4 input-group">
+                                <span class="input-group-addon"> </span>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email Address" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @*<textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>*@
+                                @Html.TextAreaFor(model => model.Subject, new { @class = "form-control", placeholder = "Your question or comment here" })
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <input type="submit" name="Send" value="Send" class="btn btn-warning pull-right"/>
+                            </div>
+                        </div>
+
+                    }
+
+
+                </div><!-- /row -->
+
+
+            </div><!-- /container -->
+        </section>
+    }@*end for each section*@
+
+
+    @foreach (var item in Model.C_Section_Table.Where(r => r.C_Section_Name == "Facebook"))
+    {
+        <section id="@Html.DisplayFor(modelItem => item.C_Section_Name)" class="bg-light-gray" style="display : @Html.DisplayFor(modelItem => item.C_Display)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">@Html.DisplayFor(modelItem => item.C_Heading)</h2>
+                        <h3 class="section-subheading text-muted">@Html.DisplayFor(modelItem => item.C_Sub_Heading)</h3>
+                    </div>
+
+
+
+
+
+                    @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                    {
+                        string tst = "";
+                        if (n.C_So_Search_Trim_1 == "Posts" && tst == "")
+                        {
+                            tst = "exit";
+                            <div class="col-lg-6 text-center">
+                                <h4>@Html.DisplayFor(modelItem => n.C_Heading)</h4>
+                                <p>@Html.DisplayFor(ModelItem => n.C_p_txt1)</p>
+                                <div class="fb-page" data-href="@Html.DisplayFor(modelItem => n.C_So_Page_Link)" data-tabs="timeline" data-width="500" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="@Html.DisplayFor(modelItem => n.C_So_Page_Link)"><a href="@Html.DisplayFor(modelItem => n.C_So_Page_Link)"></a></blockquote></div></div>
+                            </div>
+
+                        }
+
+                    }@*end of posts*@
+                    <div class="col-lg-6 text-center ">
+                        @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id && r.C_So_Search_Trim_1 == "Videos").Take(1))
+                        {
+                            
+                                
+                            <h4>@Html.DisplayFor(modelItem => n.C_Heading)</h4>
+                            <p>@Html.DisplayFor(ModelItem => n.C_p_txt1)</p>
+                        
+                        }
+
+                        <div class="pre-scrollable">
+                            @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                            {
+
+                                if (n.C_So_Search_Trim_1 == "Videos")
+                                {
+
+                                    <div id="fb-root"></div>
+                                    <script>(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.3"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="@Html.DisplayFor(modelItem => n.C_So_Video_Link)"><div class="fb-xfbml-parse-ignore"><blockquote cite="@Html.DisplayFor(modelItem => n.C_So_Video_Link)"><a href="@Html.DisplayFor(modelItem => n.C_So_Video_Link)"></a><p>@Html.DisplayFor(modelItem => n.C_Description)</p>‎Posted by <a href="@Html.DisplayFor(modelItem => n.C_So_Page_Link)">@Html.DisplayFor(modelItem => n.C_So_Page_Name)</a> @Html.DisplayFor(modelItem => n.C_Txt_1)</blockquote></div></div>
+                                    <br /><br />
+
+                                }
+
+                            }
+                        </div>
+                    </div>@*end of video*@
+
+
+
+                    <div class="col-lg-12 text-center">
+                        <br /><br />
+                        @{string tstme = "";}
+                        @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                        {
+                            if (n.C_So_Search_Trim_1 == "Photos" && tstme == "")
+                            {
+                                tstme = "exit";
+                                <h4>@Html.DisplayFor(modelItem => n.C_Heading)</h4>
+                                <p>@Html.DisplayFor(ModelItem => n.C_p_txt1)</p>
+
+                            }
+                        }
+
+                        <div id="galleria"></div>
+                    </div>@*//end of galliria*@
+
+                    @{string tst2 = "";}
+                    @foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                    {
+
+                        if (n.C_So_Search_Trim_1 == "Comments" && tst2 == "")
+                        {
+                            tst2 = "exit";
+                            <div class="col-lg-12 text-center">
+                                <h4>@Html.DisplayFor(modelItem => n.C_Heading)</h4>
+                                <p>@Html.DisplayFor(ModelItem => n.C_p_txt1)</p>
+                                <div class="fb-comments" data-href="@Html.DisplayFor(modelItem => n.C_Url_1)" data-numposts="5"></div>@*our site link*@
+                            </div>
+
+                        }
+
+                    }@*end of posts*@
+
+
+                </div>
+
+            </div>
+        </section>
+                    string tst3 = "";
+                    foreach (var n in Model.C_Section_Content.Where(r => r.C_Section_Id == item.Id))
+                    {
+                        if (n.C_So_Search_Trim_1 == "Photos" && tst3 == "")
+                        {
+                            tst3 = "exit";
+                            <script>
+                                Galleria.loadTheme('Scripts/galleria/themes/classic/galleria.classic.min.js');
+
+                                Galleria.run('#galleria', {
+                                    facebook: 'album:@Html.DisplayFor(modelItem => n.C_So_Photo_Album)',
+
+                                    lightbox: true,
+                                    facebookOptions: {
+                                        max: 30, // optional override for limit of 40 photos on an album
+                                        facebook_access_token: '@Html.DisplayFor(modelItem => n.C_So_Access_Token)'
+                                    }
+                                });
+                            </script>
+                        }
+                    }
+
+    }
