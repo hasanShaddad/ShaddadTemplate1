@@ -9,8 +9,83 @@ if you wanna help >>> you can </br>
 3- fix performence</br>
 you can contact us on ErtiqaaWebsites@gmail.com</br>
 <h2>for using the tamplate</h2></br>
- 
- <p style="border:2px solid gray; background-color:lightskyblue; margin:6px; padding:6px;">
+     <div class="panel-group" id="accordion">
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#sect"> web site sections</a>
+                                        </h3>
+                                    </div>
+                                    <div id="sect" class="panel-collapse collapse in">
+                                        <p style="border:2px solid gray; background-color:lightskyblue; margin:6px; padding:6px;">
+
+                                            <span class="badge"> home section</span>
+                                            &nbsp;
+                                            <span class="badge"> services section</span>
+                                            &nbsp;
+                                            <span class="badge"> portfolio</span>
+                                            &nbsp;
+
+                                            <span class="badge"> time line events</span>
+                                            &nbsp;
+
+                                            <span class="badge">news section</span>
+                                            &nbsp;
+
+                                            <span class="badge">contact us and location</span>
+                                            &nbsp;
+
+
+                                            <span class="badge"> facebook page`s posts</span>
+                                            &nbsp;
+                                            <span class="badge">  facebook page`s videos</span>
+                                            &nbsp;
+
+                                            <span class="badge">  facebook page`s photos slider</span>
+                                            &nbsp;
+                                        </p>
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#panel">control panel</a>
+                                        </h3>
+                                    </div>
+                                    <div id="panel" class="panel-collapse collapse">
+                                        <p style="border:2px solid gray;background-color:lightskyblue; margin:6px; padding:6px;">
+                                            <span class="badge">hide or show any section</span>
+                                            &nbsp;
+                                            <span class="badge">add edit remove contents</span>
+                                            &nbsp;
+                                            <span class="badge">upload and resize images</span>
+                                            &nbsp;
+                                            <span class="badge">control seo words and images detales</span>
+
+                                            &nbsp;
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#usetemp">how to use template ?</a>
+                                        </h3>
+                                    </div>
+                                    <div id="usetemp" class="panel-collapse collapse">
+                                        <p style="border:2px solid gray; background-color:lightskyblue; margin:6px; padding:6px;">
 
 
                                             Download the rar file
@@ -38,4 +113,8 @@ you can contact us on ErtiqaaWebsites@gmail.com</br>
 
                                             enjoy
                                             <span class="badge">-</span>
+                                        </p>
 
+                                    </div>
+                                </div>
+                            </div>
