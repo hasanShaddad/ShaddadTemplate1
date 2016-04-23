@@ -1,6 +1,6 @@
 # ErtiqaaTemplate1
  <p align="center">
-  <img src="assets/SmartStoreNET.png" alt="SmartStore.NET Demoshop" />
+  <img src="a/tamplate_1/bootstrab1/Images/white-small.png" alt="tamplate 1" />
 </p>
 
 
