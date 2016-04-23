@@ -1,7 +1,7 @@
 # ErtiqaaTemplate1
  <p align="center">
   <img src="tamplate_1/bootstrab1/Images/main/header.jpg" width="200px" alt="tamplate 1" />
-  <img src="tamplate_1/bootstrab1/Images/main/services.jpg" width="200px" alt="tamplate 1" />
+  <img src="tamplate_1/bootstrab1/Images/main/Services.jpg" width="200px" alt="tamplate 1" />
   
   <img src="tamplate_1/bootstrab1/Images/main/portfolio.jpg" width="200px" alt="tamplate 1" />
 </p>
