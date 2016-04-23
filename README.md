@@ -1,6 +1,6 @@
 # ErtiqaaTemplate1
  <p align="center">
-  <img src="ErtiqaaWebSites/ErtiqaaTemplate1/tree/master/tamplate_1/bootstrab1/Images/white-small.png" alt="tamplate 1" />
+  <img src="tamplate_1/bootstrab1/Images/main/header.jpg" alt="tamplate 1" />
 </p>
 
 
