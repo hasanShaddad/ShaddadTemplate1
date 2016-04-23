@@ -1,5 +1,11 @@
 # ErtiqaaTemplate1
- 
+ <p align="center">
+  <img src="assets/SmartStoreNET.png" alt="SmartStore.NET Demoshop" />
+</p>
+
+
+
+
 Ertiqaa template is a mvc website fully dynamic and responsive 
 its easy to use and come with back admin cntrol panel
 you can use it or change it as you need
